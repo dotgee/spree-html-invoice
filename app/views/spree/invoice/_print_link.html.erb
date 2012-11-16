@@ -1,0 +1,9 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#popup_order').click(function(e){
+      e.preventDefault();
+      window.open($(this).attr('href'), "Print", config='width=800, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no'); 
+    });
+  });
+</script>
+<span style="float:right"><%=link_to t(:print), print_order_path(@order),  :id => "popup_order" %> </span>
