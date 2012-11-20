@@ -6,4 +6,6 @@
     });
   });
 </script>
-<span style="float:right"><%=link_to t(:print), print_order_path(@order),  :id => "popup_order" %> </span>
+<%- if @order.payment and @order.payment.completed? %>
+  <span style="float:right"><%=link_to t(:print), print_order_path(@order),  :id => "popup_order" %> </span>
+<% end %>
