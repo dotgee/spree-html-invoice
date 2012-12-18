@@ -3,9 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <%= stylesheet_link_tag "admin/html-invoice.css" , :media => "all" %>
+<%= stylesheet_link_tag params[:template] , :media => "all" %>
+<style media="print" type="text/css">
+#print_btn{
+  display:none;
+}
+</style>
 <title><%= t("#{params[:template]}.header") %></title>
 </head>
-
 <body>
   <div class="a4">
     <div id="header">
